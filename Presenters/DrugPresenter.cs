@@ -40,6 +40,8 @@ namespace Pharmacy.Presenters
             this.view.SetDrugListBindingSource(drugsBindingSource);
             // Load drug list view, using GetAll
             LoadAllDrugList();
+            // Show From view
+            this.view.Show();
         }
 
         private void LoadAllDrugList()

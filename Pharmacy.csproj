@@ -52,6 +52,8 @@
     <Compile Include="Presenters\DrugPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\DrugRepository.cs" />
     <Compile Include="Views\DrugView.cs">
       <SubType>Form</SubType>
     </Compile>
