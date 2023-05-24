@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pharmacy.Models;
+using Pharmacy.Presenters.Common;
 using Pharmacy.Views;
 
 namespace Pharmacy.Presenters
@@ -34,6 +35,11 @@ namespace Pharmacy.Presenters
             // Если было вызвано событие, то то, как оно будет обрабатываться, опредеяется в SearchDrug
             // С остальными событиями аналогичная ситуация
             this.view.SearchEvent += SearchDrug;
+            this.view.AddEvent += AddDrug;
+            this.view.EditEvent += EditDrug;
+            this.view.DeleteEvent += DeleteDrug;
+            this.view.SaveEvent += SaveDrug;
+            this.view.CancelEvent += Cancel;
 
 
             // Set binding source
@@ -42,6 +48,90 @@ namespace Pharmacy.Presenters
             LoadAllDrugList();
             // Show From view
             this.view.Show();
+        }
+
+        private void Cancel(object sender, EventArgs e)
+        {
+            CleanViewFields();
+        }
+
+        private void SaveDrug(object sender, EventArgs e)
+        {
+            try
+            {
+                new Common.ViewDataValidator().Validate(view);
+
+                var model = new DrugModel();
+                model.Id = int.TryParse(view.DrugId, out _) ? int.Parse(view.DrugId) : 0;
+                model.Name = view.DrugName;
+                model.Amount = int.Parse(view.DrugAmount);
+                model.Place = int.Parse(view.DrugPlace);
+                model.Cost = int.Parse(view.DrugCost);
+
+
+                new Common.ModelDataValidator().Validate(model);
+                if(view.IsEdit)
+                {
+                    repository.Edit(model);
+                    view.Message = "Drug edited";
+                }
+                else
+                {
+                    repository.Add(model);
+                    view.Message = "Drug added";
+                }
+                view.IsSuccessful = true;
+                LoadAllDrugList();
+                CleanViewFields();
+            } 
+            catch (Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Message = ex.Message;
+            }
+        }
+
+        private void CleanViewFields()
+        {
+            view.DrugId = "";
+            view.DrugName = "";
+            view.DrugAmount = "0";
+            view.DrugPlace = "0";
+            view.DrugCost = "0.0";
+        }
+
+        private void DeleteDrug(object sender, EventArgs e)
+        {
+            try
+            {
+                var drugModel = (DrugModel)drugsBindingSource.Current;
+                repository.Delete(drugModel.Id);
+                view.IsSuccessful = true;
+                view.Message = "Drug deleted";
+                LoadAllDrugList();
+            }
+            catch (Exception)
+            {
+                view.IsSuccessful = false;
+                view.Message = "Couldn't delete drug";
+            }
+        }
+
+        private void EditDrug(object sender, EventArgs e)
+        {
+            var drug = (DrugModel)drugsBindingSource.Current;
+            view.DrugId = drug.Id.ToString();
+            view.DrugName = drug.Name;
+            view.DrugAmount = drug.Amount.ToString();
+            view.DrugPlace = drug.Place.ToString();
+            view.DrugCost = drug.Cost.ToString();
+
+            view.IsEdit = true;
+        }
+
+        private void AddDrug(object sender, EventArgs e)
+        {
+            view.IsEdit = false;
         }
 
         private void LoadAllDrugList()

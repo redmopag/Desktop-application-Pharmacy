@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pharmacy.Models;
+using Pharmacy.Presenters;
+using Pharmacy.Repositories;
+using Pharmacy.Views;
+using System.Configuration;
+using Pharmacy.Views.IEnterView;
+using Pharmacy.Views.MainView;
+using Pharmacy.Repositories.EnterRepository;
 
 namespace Pharmacy
 {
@@ -16,7 +24,10 @@ namespace Pharmacy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            string sqlConnection = ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString;
+            IMainView mainView = new MainView();
+            new MainPresenter(mainView, sqlConnection);
+            Application.Run((Form)mainView);
         }
     }
 }

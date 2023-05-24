@@ -18,21 +18,24 @@ namespace Pharmacy.Models
         private double cost;
 
         //Properties - Validations
-        [DisplayName("Drug ID")]
+        [DisplayName("ID")]
         public int Id { get => id; set => id = value; }
 
-        [DisplayName("Drug Name")]
+        [DisplayName("Название")]
         [Required(ErrorMessage = "Drug name is required")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Drug name must be between 3 and 50 characters")]
         public string Name { get => name; set => name = value; }
 
-        [DisplayName("Drug Amount")]
+        [DisplayName("Количество")]
+        [Required(ErrorMessage = "Drug amount is required")]
         public int Amount { get => amount; set => amount = value; }
 
-        [DisplayName("Drug Case")]
+        [DisplayName("Ящик")]
+        [Required(ErrorMessage = "Drug case is required")]
         public int Place { get => place; set => place = value; }
 
-        [DisplayName("Drug Cost")]
+        [DisplayName("Цена")]
+        [Required(ErrorMessage = "Drug cost is required")]
         public double Cost { get => cost; set => cost = value; }
     }
 }
