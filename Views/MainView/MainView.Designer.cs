@@ -28,60 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.buttonSuppliers = new System.Windows.Forms.Button();
             this.buttonDrugs = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.panelViews = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelControl
             // 
-            this.panel1.Controls.Add(this.buttonSuppliers);
-            this.panel1.Controls.Add(this.buttonDrugs);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
-            this.panel1.TabIndex = 1;
+            this.panelControl.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl.Controls.Add(this.buttonExit);
+            this.panelControl.Controls.Add(this.pictureBoxLogo);
+            this.panelControl.Controls.Add(this.buttonSuppliers);
+            this.panelControl.Controls.Add(this.buttonDrugs);
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl.Location = new System.Drawing.Point(0, 0);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(200, 450);
+            this.panelControl.TabIndex = 1;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.Image = global::Pharmacy.Properties.Resources.Capsule;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(23, 0);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(151, 116);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 2;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // buttonSuppliers
             // 
+            this.buttonSuppliers.BackColor = System.Drawing.Color.Green;
+            this.buttonSuppliers.FlatAppearance.BorderSize = 0;
+            this.buttonSuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSuppliers.Location = new System.Drawing.Point(0, 146);
+            this.buttonSuppliers.Location = new System.Drawing.Point(0, 264);
             this.buttonSuppliers.Name = "buttonSuppliers";
             this.buttonSuppliers.Size = new System.Drawing.Size(200, 39);
             this.buttonSuppliers.TabIndex = 1;
             this.buttonSuppliers.Text = "Suppliers";
-            this.buttonSuppliers.UseVisualStyleBackColor = true;
+            this.buttonSuppliers.UseVisualStyleBackColor = false;
             // 
             // buttonDrugs
             // 
+            this.buttonDrugs.BackColor = System.Drawing.Color.Green;
+            this.buttonDrugs.FlatAppearance.BorderSize = 0;
+            this.buttonDrugs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDrugs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDrugs.Location = new System.Drawing.Point(0, 78);
+            this.buttonDrugs.Location = new System.Drawing.Point(0, 161);
             this.buttonDrugs.Name = "buttonDrugs";
             this.buttonDrugs.Size = new System.Drawing.Size(200, 39);
             this.buttonDrugs.TabIndex = 0;
             this.buttonDrugs.Text = "Drugs";
-            this.buttonDrugs.UseVisualStyleBackColor = true;
+            this.buttonDrugs.UseVisualStyleBackColor = false;
+            // 
+            // panelViews
+            // 
+            this.panelViews.BackColor = System.Drawing.Color.Transparent;
+            this.panelViews.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelViews.Location = new System.Drawing.Point(200, 0);
+            this.panelViews.Name = "panelViews";
+            this.panelViews.Size = new System.Drawing.Size(600, 450);
+            this.panelViews.TabIndex = 2;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.LightGray;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Location = new System.Drawing.Point(0, 412);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(200, 38);
+            this.buttonExit.TabIndex = 3;
+            this.buttonExit.Text = "<----";
+            this.buttonExit.UseVisualStyleBackColor = false;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
-            this.IsMdiContainer = true;
+            this.Controls.Add(this.panelViews);
+            this.Controls.Add(this.panelControl);
             this.Name = "MainView";
             this.Text = "MainView";
-            this.panel1.ResumeLayout(false);
+            this.panelControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Button buttonSuppliers;
         private System.Windows.Forms.Button buttonDrugs;
+        private System.Windows.Forms.Panel panelViews;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

@@ -1,27 +1,30 @@
-﻿using System;
+﻿using Pharmacy.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace Pharmacy.Views
+namespace Pharmacy.Views.SuppliersView
 {
-    public partial class DrugView : Form, IDrugView
+    public partial class SuppliersView : Form, ISuppliersView
     {
-        private string _message;
-        private bool _isSuccessful;
         private bool _isEdit;
+        private bool _isSuccessful;
+        private string _message;
 
-        public DrugView()
+        public SuppliersView()
         {
             InitializeComponent();
             LinkAndRaiseViewEvents();
             // Delete tabPageDetail
-            tabControlDrugLists.TabPages.Remove(tabPageDetail);
+            tabControlSupplierLists.TabPages.Remove(tabPageDetail);
             buttonExit.Click += delegate { Close(); };
         }
 
@@ -38,25 +41,25 @@ namespace Pharmacy.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
             // Add
-            buttonAdd.Click += delegate 
+            buttonAdd.Click += delegate
             {
                 AddEvent?.Invoke(this, EventArgs.Empty);
-                tabControlDrugLists.TabPages.Remove(tabPageList);
-                tabControlDrugLists.TabPages.Add(tabPageDetail);
+                tabControlSupplierLists.TabPages.Remove(tabPageList);
+                tabControlSupplierLists.TabPages.Add(tabPageDetail);
                 tabPageDetail.Text = "Add drug";
             };
             // Edit
-            buttonEdit.Click += delegate 
-            { 
+            buttonEdit.Click += delegate
+            {
                 EditEvent?.Invoke(this, EventArgs.Empty);
-                tabControlDrugLists.TabPages.Remove(tabPageList);
-                tabControlDrugLists.TabPages.Add(tabPageDetail);
+                tabControlSupplierLists.TabPages.Remove(tabPageList);
+                tabControlSupplierLists.TabPages.Add(tabPageDetail);
                 tabPageDetail.Text = "Edit drug";
             };
             // Delete
-            buttonDelete.Click += delegate 
-            { 
-                 var result = MessageBox.Show("Are you sure you want to delete?", "Warnign", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            buttonDelete.Click += delegate
+            {
+                var result = MessageBox.Show("Are you sure you want to delete?", "Warnign", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
                     DeleteEvent?.Invoke(this, EventArgs.Empty);
@@ -64,52 +67,60 @@ namespace Pharmacy.Views
                 }
             };
             // Save
-            buttonSave.Click += delegate 
+            buttonSave.Click += delegate
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
-                if(IsSuccessful)
+                if (IsSuccessful)
                 {
-                    tabControlDrugLists.TabPages.Remove(tabPageDetail);
-                    tabControlDrugLists.TabPages.Add(tabPageList);
+                    tabControlSupplierLists.TabPages.Remove(tabPageDetail);
+                    tabControlSupplierLists.TabPages.Add(tabPageList);
                 }
                 MessageBox.Show(Message);
             };
             // Cancel
-            buttonCancel.Click += delegate 
+            buttonCancel.Click += delegate
             {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
-                tabControlDrugLists.TabPages.Remove(tabPageDetail);
-                tabControlDrugLists.TabPages.Add(tabPageList);
+                tabControlSupplierLists.TabPages.Remove(tabPageDetail);
+                tabControlSupplierLists.TabPages.Add(tabPageList);
             };
         }
 
-        public string DrugId { 
-            get => textBoxDrugId.Text; 
-            set => textBoxDrugId.Text = value; }
-        public string DrugName { 
-            get => textBoxDrugName.Text; 
-            set => textBoxDrugName.Text = value; }
-        public string DrugAmount { 
-            get => textBoxDrugAmount.Text;
-            set => textBoxDrugAmount.Text = value; }
-        public string DrugPlace { 
-            get => textBoxDrugPlace.Text; 
-            set => textBoxDrugPlace.Text = value; }
-        public string DrugCost { 
-            get => textBoxDrugCost.Text; 
-            set => textBoxDrugCost.Text = value; }
-        public string SearchValue { 
-            get => textBoxSearch.Text; 
-            set => textBoxSearch.Text = value; }
-        public bool IsEdit { 
+        public string SupplierId 
+        { 
+            get => textBoxSupplierId.Text;
+            set => textBoxSupplierId.Text = value; 
+        }
+        public string SupplierName 
+        { 
+            get => textBoxSupplier.Text;
+            set => textBoxSupplier.Text = value;
+        }
+        public string SupplierProduct 
+        { 
+            get => textBoxProduct.Text; 
+            set => textBoxProduct.Text = value; 
+        }
+        public string SearchValue
+        {
+            get => textBoxSearch.Text;
+            set => textBoxSearch.Text = value;
+        }
+        public bool IsEdit
+        {
             get => _isEdit;
-            set => _isEdit = value; }
-        public bool IsSuccessful { 
+            set => _isEdit = value;
+        }
+        public bool IsSuccessful
+        {
             get => _isSuccessful;
-            set => _isSuccessful = value; }
-        public string Message { 
+            set => _isSuccessful = value;
+        }
+        public string Message
+        {
             get => _message;
-            set => _message = value; }
+            set => _message = value;
+        }
 
         public event EventHandler SearchEvent;
         public event EventHandler EditEvent;
@@ -118,18 +129,17 @@ namespace Pharmacy.Views
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 
-        public void SetDrugListBindingSource(BindingSource drugList)
+        public void SetSupplierListBindingSource(BindingSource supplierList)
         {
-            dataGridViewDrugs.DataSource = drugList;
+            dataGridViewSuppliers.DataSource = supplierList;
         }
 
-        // Singleton
-        private static DrugView instance;
-        public static DrugView GetInstance()
+        private static SuppliersView instance;
+        public static SuppliersView GetInstance()
         {
             if(instance == null || instance.IsDisposed)
             {
-                instance = new DrugView();
+                instance = new SuppliersView();
                 instance.FormBorderStyle = FormBorderStyle.None;
                 instance.Dock = DockStyle.Fill;
             }

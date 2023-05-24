@@ -23,22 +23,17 @@ namespace Pharmacy.Repositories.EnterRepository
                 {
                     connect.Open();
                     cmd.Connection = connect;
-                    cmd.CommandText = "Select Enter_password from Enters where Enter_name=@name";
+                    cmd.CommandText = "Select Enter_password from Enters where Enter_name like @name";
+                    cmd.Parameters.AddWithValue("@name", "%" + name + "%");
                     using (var reader = cmd.ExecuteReader())
                     {
-                        if (reader == null)
-                        {
-                            return false;
-                        }
-                        else
-                        {
-                            while (reader.Read())
-                                return password == reader[0].ToString();
-                        }
+                        while (reader.Read())
+                            if (password == reader[0].ToString())
+                                return true;
                     }
                 }
             }
-            throw new Exception("Не удалось получить доступ к базе данных");
+            return false;
         }
     }
 }

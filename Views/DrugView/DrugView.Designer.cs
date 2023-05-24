@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelMedicines = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.tabControlDrugLists = new System.Windows.Forms.TabControl();
             this.tabPageList = new System.Windows.Forms.TabPage();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxDrugId = new System.Windows.Forms.TextBox();
             this.labelId = new System.Windows.Forms.Label();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.tabControlDrugLists.SuspendLayout();
             this.tabPageList.SuspendLayout();
@@ -84,6 +84,21 @@
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(800, 56);
             this.panelTitle.TabIndex = 1;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExit.AutoSize = true;
+            this.buttonExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonExit.BackColor = System.Drawing.Color.Chocolate;
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Location = new System.Drawing.Point(750, 12);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(26, 25);
+            this.buttonExit.TabIndex = 1;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = false;
             // 
             // tabControlDrugLists
             // 
@@ -156,8 +171,8 @@
             // 
             this.dataGridViewDrugs.AllowUserToAddRows = false;
             this.dataGridViewDrugs.AllowUserToDeleteRows = false;
-            this.dataGridViewDrugs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dataGridViewDrugs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewDrugs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDrugs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -217,8 +232,8 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSearch.Location = new System.Drawing.Point(27, 32);
@@ -377,21 +392,6 @@
             this.labelId.Size = new System.Drawing.Size(21, 17);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "ID";
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExit.AutoSize = true;
-            this.buttonExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonExit.BackColor = System.Drawing.Color.Chocolate;
-            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Location = new System.Drawing.Point(750, 12);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(26, 25);
-            this.buttonExit.TabIndex = 1;
-            this.buttonExit.Text = "X";
-            this.buttonExit.UseVisualStyleBackColor = false;
             // 
             // DrugView
             // 

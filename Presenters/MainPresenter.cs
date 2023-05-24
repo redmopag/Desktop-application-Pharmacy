@@ -1,9 +1,11 @@
 ﻿using Pharmacy.Models;
 using Pharmacy.Repositories;
 using Pharmacy.Repositories.EnterRepository;
+using Pharmacy.Repositories.SupplierRepository;
 using Pharmacy.Views;
-using Pharmacy.Views.IEnterView;
+using Pharmacy.Views.EnterView;
 using Pharmacy.Views.MainView;
+using Pharmacy.Views.SuppliersView;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -26,16 +28,22 @@ namespace Pharmacy.Presenters
 
             mainView.ShowDrugView += ShowDrug;
             mainView.ShowSuppliersView += ShowSuppliers;
+
+            mainView.Show();
         }
 
         private void ShowSuppliers(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ISuppliersView view = SuppliersView.GetInstance();
+            mainView.SetForm((Form)view);
+            ISupplierRepository repository = new SupplierRepository(sqlConnection);
+            new SuppliersPresenter(view, repository);
         }
 
         private void ShowDrug(object sender, EventArgs e)
         {
-            IDrugView view = DrugView.GetInstance((Form)mainView);
+            IDrugView view = DrugView.GetInstance();
+            mainView.SetForm((Form)view);
             IDrugRepository repository = new DrugRepository(sqlConnection);
             new DrugPresenter(repository, view);
         }

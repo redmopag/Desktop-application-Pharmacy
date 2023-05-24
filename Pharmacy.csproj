@@ -77,9 +77,13 @@
   <ItemGroup>
     <Compile Include="Models\DrugModel.cs" />
     <Compile Include="Models\EnterModel.cs" />
+    <Compile Include="Models\SupplierModel.cs" />
     <Compile Include="Presenters\Common\ModelDataValidator.cs" />
     <Compile Include="Presenters\Common\ViewDataValidator.cs" />
+    <Compile Include="Presenters\EnterPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="Presenters\PharmacyPresenter.cs" />
+    <Compile Include="Presenters\SuppliersPresenter.cs" />
     <Compile Include="Repositories\DrugRepository\IDrugRepository.cs" />
     <Compile Include="Presenters\DrugPresenter.cs" />
     <Compile Include="Program.cs" />
@@ -88,6 +92,8 @@
     <Compile Include="Repositories\DrugRepository\DrugRepository.cs" />
     <Compile Include="Repositories\EnterRepository\EnterRepository.cs" />
     <Compile Include="Repositories\EnterRepository\IEnterRepository.cs" />
+    <Compile Include="Repositories\SupplierRepository\ISupplierRepository.cs" />
+    <Compile Include="Repositories\SupplierRepository\SupplierRepository.cs" />
     <Compile Include="Views\DrugView\DrugView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,13 +101,14 @@
       <DependentUpon>DrugView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DrugView\IDrugView.cs" />
-    <Compile Include="Views\IEnterView\EnterView.cs">
+    <Compile Include="Views\EnterView\EnterView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\IEnterView\EnterView.Designer.cs">
+    <Compile Include="Views\EnterView\EnterView.Designer.cs">
       <DependentUpon>EnterView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\IEnterView\IEnterView.cs" />
+    <Compile Include="Views\EnterView\IEnterView.cs" />
+    <Compile Include="Views\IPharmacyView.cs" />
     <Compile Include="Views\MainView\IMainView.cs" />
     <Compile Include="Views\MainView\MainView.cs">
       <SubType>Form</SubType>
@@ -109,6 +116,23 @@
     <Compile Include="Views\MainView\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PharmacyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PharmacyView.Designer.cs">
+      <DependentUpon>PharmacyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SuppliersView\ISuppliersView.cs" />
+    <Compile Include="Views\SuppliersView\SuppliersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SuppliersView\SuppliersView.Designer.cs">
+      <DependentUpon>SuppliersView.cs</DependentUpon>
+    </Compile>
+    <None Include="Sources\Images\Human.png" />
+    <None Include="Sources\Images\Zamok.jpg" />
+    <None Include="Sources\Images\Capsule.jpg" />
+    <None Include="Sources\Images\Pharmacy.jpg" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -117,6 +141,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\DrugView\DrugView.resx">
       <DependentUpon>DrugView.cs</DependentUpon>
@@ -124,11 +149,17 @@
     <Content Include="Pharmacy.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Views\IEnterView\EnterView.resx">
+    <EmbeddedResource Include="Views\EnterView\EnterView.resx">
       <DependentUpon>EnterView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PharmacyView.resx">
+      <DependentUpon>PharmacyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuppliersView\SuppliersView.resx">
+      <DependentUpon>SuppliersView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

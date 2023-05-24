@@ -8,7 +8,7 @@ using Pharmacy.Presenters;
 using Pharmacy.Repositories;
 using Pharmacy.Views;
 using System.Configuration;
-using Pharmacy.Views.IEnterView;
+using Pharmacy.Views.EnterView;
 using Pharmacy.Views.MainView;
 using Pharmacy.Repositories.EnterRepository;
 
@@ -25,9 +25,12 @@ namespace Pharmacy
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string sqlConnection = ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString;
-            IMainView mainView = new MainView();
-            new MainPresenter(mainView, sqlConnection);
-            Application.Run((Form)mainView);
+            IPharmacyView pharmacyView = new PharmacyView();
+            new PharmacyPresenter(pharmacyView, sqlConnection);
+            Application.Run((Form)pharmacyView);
+            //IMainView view = new MainView();
+            //new MainPresenter(view, sqlConnection);
+            //Application.Run((Form)view);
         }
     }
 }
