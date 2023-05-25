@@ -1,6 +1,7 @@
 ﻿using Pharmacy.Views;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,11 @@ namespace Pharmacy.Presenters.Common
             }
             else if (!int.TryParse(view.DrugPlace, out _))
             {
-                errorMessage += " -Drug amunt must be integer value\n";
+                errorMessage += " -Drug place must be integer value\n";
             }
-            else if (!double.TryParse(view.DrugCost, out _))
+            else if (!float.TryParse(view.DrugCost, out _) && !int.TryParse(view.DrugCost, out _))
             {
-                errorMessage += " -Drug cost must be fractional number\n";
+                errorMessage += " -Drug cost must be fractional or integer number\n";
             }
             else
             {

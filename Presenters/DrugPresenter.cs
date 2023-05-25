@@ -59,6 +59,7 @@ namespace Pharmacy.Presenters
         {
             try
             {
+                view.DrugCost = view.DrugCost.Replace('.', ',');
                 new Common.ViewDataValidator().Validate(view);
 
                 var model = new DrugModel();
@@ -66,7 +67,7 @@ namespace Pharmacy.Presenters
                 model.Name = view.DrugName;
                 model.Amount = int.Parse(view.DrugAmount);
                 model.Place = int.Parse(view.DrugPlace);
-                model.Cost = int.Parse(view.DrugCost);
+                model.Cost = Convert.ToDouble(view.DrugCost);
 
 
                 new Common.ModelDataValidator().Validate(model);
@@ -95,9 +96,9 @@ namespace Pharmacy.Presenters
         {
             view.DrugId = "";
             view.DrugName = "";
-            view.DrugAmount = "0";
-            view.DrugPlace = "0";
-            view.DrugCost = "0.0";
+            view.DrugAmount = "";
+            view.DrugPlace = "";
+            view.DrugCost = "";
         }
 
         private void DeleteDrug(object sender, EventArgs e)
