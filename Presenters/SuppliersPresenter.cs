@@ -88,7 +88,7 @@ namespace Pharmacy.Presenters
         {
             try
             {
-                var model = (DrugModel)suppliersBindingSource.Current;
+                var model = (SupplierModel)suppliersBindingSource.Current;
                 repository.Delete(model.Id);
                 view.IsSuccessful = true;
                 view.Message = "Drug deleted";

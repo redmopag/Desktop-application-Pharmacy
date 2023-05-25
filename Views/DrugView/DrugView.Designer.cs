@@ -70,9 +70,9 @@
             this.labelMedicines.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMedicines.Location = new System.Drawing.Point(12, 9);
             this.labelMedicines.Name = "labelMedicines";
-            this.labelMedicines.Size = new System.Drawing.Size(122, 31);
+            this.labelMedicines.Size = new System.Drawing.Size(87, 31);
             this.labelMedicines.TabIndex = 0;
-            this.labelMedicines.Text = "Medicine";
+            this.labelMedicines.Text = "Drugs";
             this.labelMedicines.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelTitle

@@ -65,11 +65,11 @@ namespace Pharmacy.Repositories.SupplierRepository
                     // Устанавливаем соединение команд с БД
                     cmd.Connection = connect;
                     // Вводим команду
-                    cmd.CommandText = @"update Supplier
+                    cmd.CommandText = @"update Suppliers
                                         set Supplier_name=@name, Supplier_product=@product
                                         where Supplier_id=@id";
                     cmd.Parameters.Add("@name", DbType.String).Value = supplierModel.Name;
-                    cmd.Parameters.Add("@product", DbType.Int32).Value = supplierModel.Product;
+                    cmd.Parameters.Add("@product", DbType.String).Value = supplierModel.Product;
                     cmd.Parameters.Add("@id", DbType.Int32).Value = supplierModel.Id;
                     cmd.ExecuteNonQuery();
                 }
