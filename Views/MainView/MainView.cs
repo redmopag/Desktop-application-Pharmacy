@@ -24,7 +24,7 @@ namespace Pharmacy.Views.MainView
         private static MainView instance;
         public static MainView GetInstance()
         {
-            if (instance == null)
+            if (instance == null || instance.IsDisposed)
             {
                 instance = new MainView();
                 instance.FormBorderStyle = FormBorderStyle.None;

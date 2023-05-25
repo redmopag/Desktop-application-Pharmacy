@@ -20,11 +20,15 @@ namespace Pharmacy.Views
 
         public event EventHandler PharmacyLoaded;
 
+
+        private static Form instanceForm;
         public void SetForm(Form form)
         {
             form.TopLevel = false;
+            if (instanceForm != null)
+                panelViews.Controls.Remove(instanceForm);
             panelViews.Controls.Add(form);
-            form.Show();
+            instanceForm = form;
         }
     }
 }

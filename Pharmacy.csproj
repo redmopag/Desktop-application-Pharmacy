@@ -90,7 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\DrugRepository\DrugRepository.cs" />
-    <Compile Include="Repositories\EnterRepository\EnterRepository.cs" />
+    <Compile Include="Repositories\EnterRepository\EnterRepository.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Repositories\EnterRepository\IEnterRepository.cs" />
     <Compile Include="Repositories\SupplierRepository\ISupplierRepository.cs" />
     <Compile Include="Repositories\SupplierRepository\SupplierRepository.cs" />
