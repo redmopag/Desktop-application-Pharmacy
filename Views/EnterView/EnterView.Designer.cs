@@ -69,9 +69,9 @@
             this.buttonEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEnter.Location = new System.Drawing.Point(370, 276);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(58, 30);
+            this.buttonEnter.Size = new System.Drawing.Size(66, 30);
             this.buttonEnter.TabIndex = 2;
-            this.buttonEnter.Text = "Enter";
+            this.buttonEnter.Text = "Войти";
             this.buttonEnter.UseVisualStyleBackColor = true;
             // 
             // pictureBoxLogin

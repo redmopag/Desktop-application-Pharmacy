@@ -16,5 +16,7 @@ namespace Pharmacy.Views.MainView
         event EventHandler ShowDrugView;
         event EventHandler ShowSuppliersView;
         event EventHandler MainClosed;
+        event EventHandler ShowDrugPaymentView;
+        event EventHandler ShowOrderView;
     }
 }

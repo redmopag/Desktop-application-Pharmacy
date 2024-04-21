@@ -15,8 +15,12 @@ namespace Pharmacy.Views.MainView
         public MainView()
         {
             InitializeComponent();
+
             buttonDrugs.Click += delegate { ShowDrugView?.Invoke(this, EventArgs.Empty); };
             buttonSuppliers.Click += delegate { ShowSuppliersView?.Invoke(this, EventArgs.Empty); };
+            buttonPayment.Click += delegate { ShowDrugPaymentView?.Invoke(this, EventArgs.Empty); };
+            buttonOrder.Click += delegate { ShowOrderView?.Invoke(this, EventArgs.Empty); };
+
             this.FormClosed += delegate { MainClosed?.Invoke(this, EventArgs.Empty); };
             buttonExit.Click += delegate { Close(); };
         }
@@ -54,5 +58,7 @@ namespace Pharmacy.Views.MainView
         public event EventHandler ShowDrugView;
         public event EventHandler ShowSuppliersView;
         public event EventHandler MainClosed;
+        public event EventHandler ShowDrugPaymentView;
+        public event EventHandler ShowOrderView;
     }
 }

@@ -70,9 +70,9 @@
             this.labelMedicines.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMedicines.Location = new System.Drawing.Point(12, 9);
             this.labelMedicines.Name = "labelMedicines";
-            this.labelMedicines.Size = new System.Drawing.Size(87, 31);
+            this.labelMedicines.Size = new System.Drawing.Size(147, 31);
             this.labelMedicines.TabIndex = 0;
-            this.labelMedicines.Text = "Drugs";
+            this.labelMedicines.Text = "Лекарства";
             this.labelMedicines.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelTitle
@@ -102,9 +102,11 @@
             // 
             // tabControlDrugLists
             // 
+            this.tabControlDrugLists.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlDrugLists.Controls.Add(this.tabPageList);
             this.tabControlDrugLists.Controls.Add(this.tabPageDetail);
-            this.tabControlDrugLists.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlDrugLists.Location = new System.Drawing.Point(0, 56);
             this.tabControlDrugLists.Name = "tabControlDrugLists";
             this.tabControlDrugLists.SelectedIndex = 0;
@@ -126,7 +128,7 @@
             this.tabPageList.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageList.Size = new System.Drawing.Size(792, 368);
             this.tabPageList.TabIndex = 0;
-            this.tabPageList.Text = "List";
+            this.tabPageList.Text = "Список";
             // 
             // buttonDelete
             // 
@@ -138,7 +140,7 @@
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 6;
-            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = false;
             // 
             // buttonEdit
@@ -151,7 +153,7 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 5;
-            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
             // 
             // buttonAdd
@@ -164,7 +166,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 4;
-            this.buttonAdd.Text = "Add";
+            this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
             // 
             // dataGridViewDrugs
@@ -227,7 +229,7 @@
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 25);
             this.buttonSearch.TabIndex = 2;
-            this.buttonSearch.Text = "Search";
+            this.buttonSearch.Text = "Поиск";
             this.buttonSearch.UseVisualStyleBackColor = false;
             // 
             // textBoxSearch
@@ -244,12 +246,12 @@
             // labelSearch
             // 
             this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSearch.Location = new System.Drawing.Point(24, 16);
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSearch.Location = new System.Drawing.Point(23, 9);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(53, 17);
+            this.labelSearch.Size = new System.Drawing.Size(55, 20);
             this.labelSearch.TabIndex = 0;
-            this.labelSearch.Text = "Search";
+            this.labelSearch.Text = "Поиск";
             // 
             // tabPageDetail
             // 
@@ -270,50 +272,54 @@
             this.tabPageDetail.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDetail.Size = new System.Drawing.Size(792, 368);
             this.tabPageDetail.TabIndex = 1;
-            this.tabPageDetail.Text = "Detail";
+            this.tabPageDetail.Text = "Детали";
             this.tabPageDetail.UseVisualStyleBackColor = true;
             // 
             // buttonCancel
             // 
+            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoSize = true;
             this.buttonCancel.BackColor = System.Drawing.Color.Teal;
             this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCancel.Location = new System.Drawing.Point(322, 254);
+            this.buttonCancel.Location = new System.Drawing.Point(443, 285);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 29);
+            this.buttonCancel.Size = new System.Drawing.Size(85, 29);
             this.buttonCancel.TabIndex = 11;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "Отменить";
             this.buttonCancel.UseVisualStyleBackColor = false;
             // 
             // buttonSave
             // 
+            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.AutoSize = true;
             this.buttonSave.BackColor = System.Drawing.Color.DarkKhaki;
             this.buttonSave.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(204, 254);
+            this.buttonSave.Location = new System.Drawing.Point(249, 285);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 29);
+            this.buttonSave.Size = new System.Drawing.Size(89, 29);
             this.buttonSave.TabIndex = 10;
-            this.buttonSave.Text = "Save";
+            this.buttonSave.Text = "Сохранить";
             this.buttonSave.UseVisualStyleBackColor = false;
             // 
             // textBoxDrugPlace
             // 
+            this.textBoxDrugPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDrugPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDrugPlace.Location = new System.Drawing.Point(411, 174);
+            this.textBoxDrugPlace.Location = new System.Drawing.Point(352, 176);
             this.textBoxDrugPlace.Name = "textBoxDrugPlace";
             this.textBoxDrugPlace.Size = new System.Drawing.Size(176, 23);
             this.textBoxDrugPlace.TabIndex = 9;
             // 
             // labelDrugPlace
             // 
+            this.labelDrugPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDrugPlace.AutoSize = true;
             this.labelDrugPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDrugPlace.Location = new System.Drawing.Point(361, 174);
+            this.labelDrugPlace.Location = new System.Drawing.Point(246, 176);
             this.labelDrugPlace.Name = "labelDrugPlace";
             this.labelDrugPlace.Size = new System.Drawing.Size(44, 17);
             this.labelDrugPlace.TabIndex = 8;
@@ -321,17 +327,19 @@
             // 
             // textBoxDrugCost
             // 
+            this.textBoxDrugCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDrugCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDrugCost.Location = new System.Drawing.Point(103, 174);
+            this.textBoxDrugCost.Location = new System.Drawing.Point(352, 219);
             this.textBoxDrugCost.Name = "textBoxDrugCost";
             this.textBoxDrugCost.Size = new System.Drawing.Size(176, 23);
             this.textBoxDrugCost.TabIndex = 7;
             // 
             // labelDrugCost
             // 
+            this.labelDrugCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDrugCost.AutoSize = true;
             this.labelDrugCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDrugCost.Location = new System.Drawing.Point(54, 174);
+            this.labelDrugCost.Location = new System.Drawing.Point(246, 219);
             this.labelDrugCost.Name = "labelDrugCost";
             this.labelDrugCost.Size = new System.Drawing.Size(43, 17);
             this.labelDrugCost.TabIndex = 6;
@@ -339,17 +347,19 @@
             // 
             // textBoxDrugAmount
             // 
+            this.textBoxDrugAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDrugAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDrugAmount.Location = new System.Drawing.Point(411, 102);
+            this.textBoxDrugAmount.Location = new System.Drawing.Point(352, 90);
             this.textBoxDrugAmount.Name = "textBoxDrugAmount";
             this.textBoxDrugAmount.Size = new System.Drawing.Size(176, 23);
             this.textBoxDrugAmount.TabIndex = 5;
             // 
             // labelDrugAmount
             // 
+            this.labelDrugAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDrugAmount.AutoSize = true;
             this.labelDrugAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDrugAmount.Location = new System.Drawing.Point(319, 102);
+            this.labelDrugAmount.Location = new System.Drawing.Point(246, 90);
             this.labelDrugAmount.Name = "labelDrugAmount";
             this.labelDrugAmount.Size = new System.Drawing.Size(86, 17);
             this.labelDrugAmount.TabIndex = 4;
@@ -357,17 +367,19 @@
             // 
             // textBoxDrugName
             // 
+            this.textBoxDrugName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDrugName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDrugName.Location = new System.Drawing.Point(103, 99);
+            this.textBoxDrugName.Location = new System.Drawing.Point(352, 132);
             this.textBoxDrugName.Name = "textBoxDrugName";
             this.textBoxDrugName.Size = new System.Drawing.Size(176, 23);
             this.textBoxDrugName.TabIndex = 3;
             // 
             // labelName
             // 
+            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName.Location = new System.Drawing.Point(25, 100);
+            this.labelName.Location = new System.Drawing.Point(246, 132);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(72, 17);
             this.labelName.TabIndex = 2;
@@ -375,8 +387,9 @@
             // 
             // textBoxDrugId
             // 
+            this.textBoxDrugId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDrugId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDrugId.Location = new System.Drawing.Point(87, 29);
+            this.textBoxDrugId.Location = new System.Drawing.Point(352, 46);
             this.textBoxDrugId.Name = "textBoxDrugId";
             this.textBoxDrugId.ReadOnly = true;
             this.textBoxDrugId.Size = new System.Drawing.Size(176, 23);
@@ -385,13 +398,14 @@
             // 
             // labelId
             // 
+            this.labelId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelId.AutoSize = true;
             this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelId.Location = new System.Drawing.Point(25, 29);
+            this.labelId.Location = new System.Drawing.Point(246, 46);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(21, 17);
+            this.labelId.Size = new System.Drawing.Size(93, 17);
             this.labelId.TabIndex = 0;
-            this.labelId.Text = "ID";
+            this.labelId.Text = "ID лекарства";
             // 
             // DrugView
             // 

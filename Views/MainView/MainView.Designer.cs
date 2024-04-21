@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panelControl = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.buttonSuppliers = new System.Windows.Forms.Button();
             this.buttonDrugs = new System.Windows.Forms.Button();
             this.panelViews = new System.Windows.Forms.Panel();
-            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonPayment = new System.Windows.Forms.Button();
+            this.buttonOrder = new System.Windows.Forms.Button();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +43,8 @@
             // panelControl
             // 
             this.panelControl.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl.Controls.Add(this.buttonOrder);
+            this.panelControl.Controls.Add(this.buttonPayment);
             this.panelControl.Controls.Add(this.buttonExit);
             this.panelControl.Controls.Add(this.pictureBoxLogo);
             this.panelControl.Controls.Add(this.buttonSuppliers);
@@ -50,6 +54,18 @@
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(200, 450);
             this.panelControl.TabIndex = 1;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.LightGray;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Location = new System.Drawing.Point(0, 412);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(200, 38);
+            this.buttonExit.TabIndex = 3;
+            this.buttonExit.Text = "<----";
+            this.buttonExit.UseVisualStyleBackColor = false;
             // 
             // pictureBoxLogo
             // 
@@ -68,11 +84,11 @@
             this.buttonSuppliers.FlatAppearance.BorderSize = 0;
             this.buttonSuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSuppliers.Location = new System.Drawing.Point(0, 264);
+            this.buttonSuppliers.Location = new System.Drawing.Point(0, 206);
             this.buttonSuppliers.Name = "buttonSuppliers";
             this.buttonSuppliers.Size = new System.Drawing.Size(200, 39);
             this.buttonSuppliers.TabIndex = 1;
-            this.buttonSuppliers.Text = "Suppliers";
+            this.buttonSuppliers.Text = "Поставщики";
             this.buttonSuppliers.UseVisualStyleBackColor = false;
             // 
             // buttonDrugs
@@ -85,7 +101,7 @@
             this.buttonDrugs.Name = "buttonDrugs";
             this.buttonDrugs.Size = new System.Drawing.Size(200, 39);
             this.buttonDrugs.TabIndex = 0;
-            this.buttonDrugs.Text = "Drugs";
+            this.buttonDrugs.Text = "Лекарства";
             this.buttonDrugs.UseVisualStyleBackColor = false;
             // 
             // panelViews
@@ -97,17 +113,31 @@
             this.panelViews.Size = new System.Drawing.Size(600, 450);
             this.panelViews.TabIndex = 2;
             // 
-            // buttonExit
+            // buttonPayment
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.LightGray;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Location = new System.Drawing.Point(0, 412);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(200, 38);
-            this.buttonExit.TabIndex = 3;
-            this.buttonExit.Text = "<----";
-            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonPayment.BackColor = System.Drawing.Color.Green;
+            this.buttonPayment.FlatAppearance.BorderSize = 0;
+            this.buttonPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPayment.Location = new System.Drawing.Point(0, 251);
+            this.buttonPayment.Name = "buttonPayment";
+            this.buttonPayment.Size = new System.Drawing.Size(200, 39);
+            this.buttonPayment.TabIndex = 4;
+            this.buttonPayment.Text = "Оплата";
+            this.buttonPayment.UseVisualStyleBackColor = false;
+            // 
+            // buttonOrder
+            // 
+            this.buttonOrder.BackColor = System.Drawing.Color.Green;
+            this.buttonOrder.FlatAppearance.BorderSize = 0;
+            this.buttonOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOrder.Location = new System.Drawing.Point(0, 296);
+            this.buttonOrder.Name = "buttonOrder";
+            this.buttonOrder.Size = new System.Drawing.Size(200, 39);
+            this.buttonOrder.TabIndex = 5;
+            this.buttonOrder.Text = "Поставки";
+            this.buttonOrder.UseVisualStyleBackColor = false;
             // 
             // MainView
             // 
@@ -133,5 +163,7 @@
         private System.Windows.Forms.Panel panelViews;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonOrder;
+        private System.Windows.Forms.Button buttonPayment;
     }
 }

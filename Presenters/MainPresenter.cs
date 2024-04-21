@@ -1,10 +1,13 @@
 ﻿using Pharmacy.Models;
 using Pharmacy.Repositories;
 using Pharmacy.Repositories.EnterRepository;
+using Pharmacy.Repositories.OrderRepository;
 using Pharmacy.Repositories.SupplierRepository;
 using Pharmacy.Views;
+using Pharmacy.Views.DrugPayment;
 using Pharmacy.Views.EnterView;
 using Pharmacy.Views.MainView;
+using Pharmacy.Views.OrderView;
 using Pharmacy.Views.SuppliersView;
 using System;
 using System.Collections.Generic;
@@ -28,8 +31,27 @@ namespace Pharmacy.Presenters
 
             mainView.ShowDrugView += ShowDrug;
             mainView.ShowSuppliersView += ShowSuppliers;
+            mainView.ShowDrugPaymentView += ShowPayment;
+            mainView.ShowOrderView += ShowOrder;
 
             mainView.Show();
+        }
+
+        private void ShowOrder(object sender, EventArgs e)
+        {
+            OrderView view = OrderView.GetInstance();
+            mainView.SetForm((Form)view);
+            OrderRepository repository = new OrderRepository(sqlConnection);
+            SupplierRepository supplierRepository = new SupplierRepository(sqlConnection);
+            new OrderPresenter(repository, view, supplierRepository);
+        }
+
+        private void ShowPayment(object sender, EventArgs e)
+        {
+            DrugPaymentView view = DrugPaymentView.GetInstance();
+            mainView.SetForm((Form)view);
+            DrugRepository repository = new DrugRepository(sqlConnection);
+            new DrugPaymentPresenter(repository, view);
         }
 
         private void ShowSuppliers(object sender, EventArgs e)

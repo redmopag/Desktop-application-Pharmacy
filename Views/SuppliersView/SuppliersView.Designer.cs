@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelSupplierName = new System.Windows.Forms.Label();
             this.textBoxSupplier = new System.Windows.Forms.TextBox();
             this.labelSupplier = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             // 
             this.labelSupplierName.AutoSize = true;
             this.labelSupplierName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSupplierName.Location = new System.Drawing.Point(29, 217);
+            this.labelSupplierName.Location = new System.Drawing.Point(222, 206);
             this.labelSupplierName.Name = "labelSupplierName";
             this.labelSupplierName.Size = new System.Drawing.Size(63, 17);
             this.labelSupplierName.TabIndex = 4;
@@ -73,7 +73,7 @@
             // textBoxSupplier
             // 
             this.textBoxSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSupplier.Location = new System.Drawing.Point(190, 150);
+            this.textBoxSupplier.Location = new System.Drawing.Point(383, 139);
             this.textBoxSupplier.Name = "textBoxSupplier";
             this.textBoxSupplier.Size = new System.Drawing.Size(176, 23);
             this.textBoxSupplier.TabIndex = 3;
@@ -82,7 +82,7 @@
             // 
             this.labelSupplier.AutoSize = true;
             this.labelSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSupplier.Location = new System.Drawing.Point(29, 150);
+            this.labelSupplier.Location = new System.Drawing.Point(222, 139);
             this.labelSupplier.Name = "labelSupplier";
             this.labelSupplier.Size = new System.Drawing.Size(155, 17);
             this.labelSupplier.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             this.labelId.AutoSize = true;
             this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelId.Location = new System.Drawing.Point(29, 82);
+            this.labelId.Location = new System.Drawing.Point(222, 71);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(21, 17);
             this.labelId.TabIndex = 0;
@@ -113,7 +113,7 @@
             this.tabPageList.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageList.Size = new System.Drawing.Size(792, 368);
             this.tabPageList.TabIndex = 0;
-            this.tabPageList.Text = "List";
+            this.tabPageList.Text = "Список";
             // 
             // buttonDelete
             // 
@@ -125,7 +125,7 @@
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 6;
-            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = false;
             // 
             // buttonEdit
@@ -138,7 +138,7 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 5;
-            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
             // 
             // buttonAdd
@@ -151,7 +151,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 4;
-            this.buttonAdd.Text = "Add";
+            this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
             // 
             // dataGridViewSuppliers
@@ -166,39 +166,39 @@
             this.dataGridViewSuppliers.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataGridViewSuppliers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewSuppliers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewSuppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewSuppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSuppliers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSuppliers.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewSuppliers.EnableHeadersVisualStyles = false;
             this.dataGridViewSuppliers.Location = new System.Drawing.Point(27, 64);
             this.dataGridViewSuppliers.Name = "dataGridViewSuppliers";
             this.dataGridViewSuppliers.ReadOnly = true;
             this.dataGridViewSuppliers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSuppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSuppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewSuppliers.RowHeadersVisible = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewSuppliers.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewSuppliers.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewSuppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSuppliers.Size = new System.Drawing.Size(663, 282);
             this.dataGridViewSuppliers.TabIndex = 3;
@@ -214,7 +214,7 @@
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 25);
             this.buttonSearch.TabIndex = 2;
-            this.buttonSearch.Text = "Search";
+            this.buttonSearch.Text = "Поиск";
             this.buttonSearch.UseVisualStyleBackColor = false;
             // 
             // textBoxSearch
@@ -231,12 +231,12 @@
             // labelSearch
             // 
             this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSearch.Location = new System.Drawing.Point(24, 16);
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSearch.Location = new System.Drawing.Point(23, 9);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(53, 17);
+            this.labelSearch.Size = new System.Drawing.Size(55, 20);
             this.labelSearch.TabIndex = 0;
-            this.labelSearch.Text = "Search";
+            this.labelSearch.Text = "Поиск";
             // 
             // buttonCancel
             // 
@@ -245,11 +245,11 @@
             this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCancel.Location = new System.Drawing.Point(443, 150);
+            this.buttonCancel.Location = new System.Drawing.Point(434, 266);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 29);
+            this.buttonCancel.Size = new System.Drawing.Size(125, 29);
             this.buttonCancel.TabIndex = 11;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "Отменить";
             this.buttonCancel.UseVisualStyleBackColor = false;
             // 
             // buttonSave
@@ -259,17 +259,17 @@
             this.buttonSave.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(443, 82);
+            this.buttonSave.Location = new System.Drawing.Point(225, 266);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 29);
+            this.buttonSave.Size = new System.Drawing.Size(125, 29);
             this.buttonSave.TabIndex = 10;
-            this.buttonSave.Text = "Save";
+            this.buttonSave.Text = "Сохранить";
             this.buttonSave.UseVisualStyleBackColor = false;
             // 
             // textBoxProduct
             // 
             this.textBoxProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxProduct.Location = new System.Drawing.Point(190, 217);
+            this.textBoxProduct.Location = new System.Drawing.Point(383, 206);
             this.textBoxProduct.Name = "textBoxProduct";
             this.textBoxProduct.Size = new System.Drawing.Size(176, 23);
             this.textBoxProduct.TabIndex = 5;
@@ -289,13 +289,13 @@
             this.tabPageDetail.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDetail.Size = new System.Drawing.Size(792, 368);
             this.tabPageDetail.TabIndex = 1;
-            this.tabPageDetail.Text = "Detail";
+            this.tabPageDetail.Text = "Детали";
             this.tabPageDetail.UseVisualStyleBackColor = true;
             // 
             // textBoxSupplierId
             // 
             this.textBoxSupplierId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSupplierId.Location = new System.Drawing.Point(190, 79);
+            this.textBoxSupplierId.Location = new System.Drawing.Point(383, 68);
             this.textBoxSupplierId.Name = "textBoxSupplierId";
             this.textBoxSupplierId.ReadOnly = true;
             this.textBoxSupplierId.Size = new System.Drawing.Size(176, 23);
@@ -344,9 +344,9 @@
             this.labelSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSuppliers.Location = new System.Drawing.Point(12, 9);
             this.labelSuppliers.Name = "labelSuppliers";
-            this.labelSuppliers.Size = new System.Drawing.Size(127, 31);
+            this.labelSuppliers.Size = new System.Drawing.Size(170, 31);
             this.labelSuppliers.TabIndex = 0;
-            this.labelSuppliers.Text = "Suppliers";
+            this.labelSuppliers.Text = "Поставщики";
             this.labelSuppliers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SuppliersView

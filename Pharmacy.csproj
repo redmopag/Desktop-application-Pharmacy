@@ -76,12 +76,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\DrugModel.cs" />
+    <Compile Include="Models\DrugsInOrderModel.cs" />
     <Compile Include="Models\EnterModel.cs" />
+    <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Models\SupplierModel.cs" />
     <Compile Include="Presenters\Common\ModelDataValidator.cs" />
     <Compile Include="Presenters\Common\ViewDataValidator.cs" />
+    <Compile Include="Presenters\DrugPaymentPresenter.cs" />
     <Compile Include="Presenters\EnterPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="Presenters\OrderPresenter.cs" />
     <Compile Include="Presenters\PharmacyPresenter.cs" />
     <Compile Include="Presenters\SuppliersPresenter.cs" />
     <Compile Include="Repositories\DrugRepository\IDrugRepository.cs" />
@@ -94,8 +98,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Repositories\EnterRepository\IEnterRepository.cs" />
+    <Compile Include="Repositories\OrderRepository\OrderRepository.cs" />
     <Compile Include="Repositories\SupplierRepository\ISupplierRepository.cs" />
     <Compile Include="Repositories\SupplierRepository\SupplierRepository.cs" />
+    <Compile Include="Views\DrugPaymentView\DrugPaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DrugPaymentView\DrugPaymentView.Designer.cs">
+      <DependentUpon>DrugPaymentView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DrugView\DrugView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +128,12 @@
     </Compile>
     <Compile Include="Views\MainView\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderView\OrderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderView\OrderView.Designer.cs">
+      <DependentUpon>OrderView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PharmacyView.cs">
       <SubType>Form</SubType>
@@ -145,6 +162,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\DrugPaymentView\DrugPaymentView.resx">
+      <DependentUpon>DrugPaymentView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DrugView\DrugView.resx">
       <DependentUpon>DrugView.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderView\OrderView.resx">
+      <DependentUpon>OrderView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PharmacyView.resx">
       <DependentUpon>PharmacyView.cs</DependentUpon>
