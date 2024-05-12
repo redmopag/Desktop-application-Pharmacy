@@ -21,7 +21,7 @@ namespace Pharmacy.Presenters.Common
             {
                 errorMessage += " -Drug place must be integer value\n";
             }
-            else if (!float.TryParse(view.DrugCost, out _) && !int.TryParse(view.DrugCost, out _))
+            else if (!double.TryParse(view.DrugCost, out _) && !int.TryParse(view.DrugCost, out _))
             {
                 errorMessage += " -Drug cost must be fractional or integer number\n";
             }
