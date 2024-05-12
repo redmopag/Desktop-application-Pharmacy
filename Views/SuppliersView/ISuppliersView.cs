@@ -12,7 +12,7 @@ namespace Pharmacy.Views.SuppliersView
      
         string SupplierId { get; set; }
         string SupplierName { get; set; }
-        string SupplierProduct { get; set;  }
+        string SupplierEmail { get; set;  }
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }

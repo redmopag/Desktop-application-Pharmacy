@@ -12,7 +12,7 @@ namespace Pharmacy.Models
     {
         private int id;
         private string name;
-        private string product;
+        private string email;
 
         [Required(ErrorMessage = "Supplier id is required")]
         public int Id { get => id; set => id = value; }
@@ -21,8 +21,8 @@ namespace Pharmacy.Models
         [Required(ErrorMessage = "Supplier name is required")]
         public string Name { get => name; set => name = value; }
 
-        [DisplayName("Товар")]
-        [Required(ErrorMessage = "Supplier product is required")]
-        public string Product { get => product; set => product = value; }
+        [DisplayName("Email")]
+        [Required(ErrorMessage = "Supplier email is required")]
+        public string Email { get => email; set => email = value; }
     }
 }

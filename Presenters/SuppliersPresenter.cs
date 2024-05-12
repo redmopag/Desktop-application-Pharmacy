@@ -45,7 +45,7 @@ namespace Pharmacy.Presenters
         {
             view.SupplierId = "0";
             view.SupplierName = "";
-            view.SupplierProduct = "";
+            view.SupplierEmail = "";
         }
 
         private void Cancel(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Pharmacy.Presenters
                 var model = new SupplierModel();
                 model.Id = int.TryParse(view.SupplierId, out _) ? int.Parse(view.SupplierId) : 0;
                 model.Name = view.SupplierName;
-                model.Product = view.SupplierProduct;
+                model.Email = view.SupplierEmail;
 
                 new Common.ModelDataValidator().Validate(model);
                 if (view.IsEdit)
@@ -106,7 +106,7 @@ namespace Pharmacy.Presenters
             var model = (SupplierModel)suppliersBindingSource.Current;
             view.SupplierId = model.Id.ToString();
             view.SupplierName = model.Name;
-            view.SupplierProduct = model.Product;
+            view.SupplierEmail = model.Email;
 
             view.IsEdit = true;
         }

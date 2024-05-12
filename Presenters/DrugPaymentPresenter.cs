@@ -53,6 +53,7 @@ namespace Pharmacy.Presenters
         private void CleanPage(object sender, EventArgs e)
         {
             Clean();
+            bindingSourcePayment.Clear();
         }
         private void Clean()
         {

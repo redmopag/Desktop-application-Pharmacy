@@ -30,7 +30,7 @@ namespace Pharmacy.Repositories.OrderRepository
                     // Вводим команду
                     cmd.CommandText = "insert into Orders values(NULL, @data, @time)";
                     cmd.Parameters.Add("@data", DbType.String).Value = orderModel.Data;
-                    cmd.Parameters.Add("@time", DbType.Int32).Value = orderModel.Time;
+                    cmd.Parameters.Add("@time", DbType.String).Value = orderModel.Time;
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -64,7 +64,7 @@ namespace Pharmacy.Repositories.OrderRepository
                     // Устанавливаем соединение команд с БД
                     cmd.Connection = connect;
                     // Вводим команду
-                    cmd.CommandText = "SELECT * FROM Orders order by column DESC LIMIT 1";
+                    cmd.CommandText = "SELECT * FROM Orders WHERE Order_id = (SELECT MAX(Order_id) FROM Orders)";
                     // Запускаем command reader
                     using (var reader = cmd.ExecuteReader())
                     {

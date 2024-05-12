@@ -47,7 +47,7 @@ namespace Pharmacy.Presenters
             this.view.PostCancelEvent += PostCancel;
             
 
-            this.view.SetBindingSource(bsOrderList);
+            this.view.SetBindingSource(bsOrderList, bsOrderCancel, bsNewOrder, bsOrderDetail);
             LoadAllOrderList();
             this.view.Show();
         }
@@ -92,6 +92,7 @@ namespace Pharmacy.Presenters
         {
             if(bsNewOrder.Count != 0)
             {
+                // Получение рандомного времени и даты доставки заказа
                 Random gen = new Random();
                 DateTime start = new DateTime(2023, 11, 12);
                 int range = (DateTime.Today - start).Days;
@@ -100,15 +101,20 @@ namespace Pharmacy.Presenters
                 string date = dateTime.Date.ToString();
                 string time = dateTime.TimeOfDay.ToString();
 
+                // Создаём модель заказа
                 var model = new OrderModel();
                 model.Data = date;
                 model.Time = time;
+                // Частично заполняем её: дата и вермя - и добавляем в бд
                 repository.AddOrder(model);
 
+                // Получаем последнюю запись с БД
                 model = repository.getLatestRecord();
+                // Проходимся по всем лекарствам в заказе
                 var list = bsNewOrder.List;
                 for(int i = 0; i < list.Count; ++i)
                 {
+                    // Добавляем в модель данные: ID заказа
                     var drugModel = (DrugsInOrderModel)list[i];
                     drugModel.OrderId = model.Id;
                     repository.AddDrug(drugModel);
@@ -120,6 +126,8 @@ namespace Pharmacy.Presenters
 
                 view.IsSuccessful = true;
                 view.Message = "Поставка создана";
+
+                LoadAllOrderList();
             }
             else
             {
@@ -146,7 +154,7 @@ namespace Pharmacy.Presenters
                 model.SupplierId = suppliers.First().Id;
 
                 bsNewOrder.Add(model);
-
+                view.IsSuccessful = true;
             }
             else
             {

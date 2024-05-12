@@ -96,7 +96,7 @@ namespace Pharmacy.Views.SuppliersView
             get => textBoxSupplier.Text;
             set => textBoxSupplier.Text = value;
         }
-        public string SupplierProduct 
+        public string SupplierEmail 
         { 
             get => textBoxProduct.Text; 
             set => textBoxProduct.Text = value; 

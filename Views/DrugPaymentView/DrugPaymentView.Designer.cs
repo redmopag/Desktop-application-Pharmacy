@@ -49,8 +49,8 @@
             this.labelTotalSum = new System.Windows.Forms.Label();
             this.dataGridViewPay = new System.Windows.Forms.DataGridView();
             this.panelDrugTitle = new System.Windows.Forms.Panel();
-            this.labelDrugTitle = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.labelDrugTitle = new System.Windows.Forms.Label();
             this.tabControlDrugLists.SuspendLayout();
             this.tabPageDrugList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrugsList)).BeginInit();
@@ -103,6 +103,7 @@
             this.dataGridViewDrugsList.EnableHeadersVisualStyles = false;
             this.dataGridViewDrugsList.Location = new System.Drawing.Point(3, 66);
             this.dataGridViewDrugsList.Name = "dataGridViewDrugsList";
+            this.dataGridViewDrugsList.ReadOnly = true;
             this.dataGridViewDrugsList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewDrugsList.RowHeadersVisible = false;
             this.dataGridViewDrugsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -275,6 +276,7 @@
             this.dataGridViewPay.EnableHeadersVisualStyles = false;
             this.dataGridViewPay.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewPay.Name = "dataGridViewPay";
+            this.dataGridViewPay.ReadOnly = true;
             this.dataGridViewPay.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewPay.RowHeadersVisible = false;
             this.dataGridViewPay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -290,16 +292,6 @@
             this.panelDrugTitle.Size = new System.Drawing.Size(800, 74);
             this.panelDrugTitle.TabIndex = 2;
             // 
-            // labelDrugTitle
-            // 
-            this.labelDrugTitle.AutoSize = true;
-            this.labelDrugTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDrugTitle.Location = new System.Drawing.Point(28, 27);
-            this.labelDrugTitle.Name = "labelDrugTitle";
-            this.labelDrugTitle.Size = new System.Drawing.Size(178, 24);
-            this.labelDrugTitle.TabIndex = 0;
-            this.labelDrugTitle.Text = "Продажа лекарств";
-            // 
             // buttonExit
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -314,6 +306,16 @@
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
+            // 
+            // labelDrugTitle
+            // 
+            this.labelDrugTitle.AutoSize = true;
+            this.labelDrugTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDrugTitle.Location = new System.Drawing.Point(28, 27);
+            this.labelDrugTitle.Name = "labelDrugTitle";
+            this.labelDrugTitle.Size = new System.Drawing.Size(178, 24);
+            this.labelDrugTitle.TabIndex = 0;
+            this.labelDrugTitle.Text = "Продажа лекарств";
             // 
             // DrugPaymentView
             // 

@@ -28,9 +28,9 @@ namespace Pharmacy.Repositories.SupplierRepository
                     // Устанавливаем соединение команд с БД
                     cmd.Connection = connect;
                     // Вводим команду
-                    cmd.CommandText = "insert into Suppliers values(NULL, @name, @product)";
+                    cmd.CommandText = "insert into Suppliers values(NULL, @name, @email)";
                     cmd.Parameters.Add("@name", DbType.String).Value = supplierModel.Name;
-                    cmd.Parameters.Add("@product", DbType.String).Value = supplierModel.Product;
+                    cmd.Parameters.Add("@email", DbType.String).Value = supplierModel.Email;
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -66,10 +66,10 @@ namespace Pharmacy.Repositories.SupplierRepository
                     cmd.Connection = connect;
                     // Вводим команду
                     cmd.CommandText = @"update Suppliers
-                                        set Supplier_name=@name, Supplier_product=@product
+                                        set Supplier_name=@name, Supplier_email=@email
                                         where Supplier_id=@id";
                     cmd.Parameters.Add("@name", DbType.String).Value = supplierModel.Name;
-                    cmd.Parameters.Add("@product", DbType.String).Value = supplierModel.Product;
+                    cmd.Parameters.Add("@email", DbType.String).Value = supplierModel.Email;
                     cmd.Parameters.Add("@id", DbType.Int32).Value = supplierModel.Id;
                     cmd.ExecuteNonQuery();
                 }
@@ -98,7 +98,7 @@ namespace Pharmacy.Repositories.SupplierRepository
                             var supplierModel = new SupplierModel();
                             supplierModel.Id = Convert.ToInt32(reader[0]);
                             supplierModel.Name = reader[1].ToString();
-                            supplierModel.Product = reader[2].ToString();
+                            supplierModel.Email = reader[2].ToString();
 
                             supplierList.Add(supplierModel);
                         }
@@ -136,7 +136,7 @@ namespace Pharmacy.Repositories.SupplierRepository
                             var supplierModel = new SupplierModel();
                             supplierModel.Id = Convert.ToInt32(reader[0]);
                             supplierModel.Name = reader[1].ToString();
-                            supplierModel.Product = reader[2].ToString();
+                            supplierModel.Email = reader[2].ToString();
 
                             supplierList.Add(supplierModel);
                         }

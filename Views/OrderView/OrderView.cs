@@ -35,9 +35,13 @@ namespace Pharmacy.Views.OrderView
             tabControlOrders.TabPages.Remove(tabPageOrderCancel);
         }
 
-        public void SetBindingSource(BindingSource dataSource)
+        public void SetBindingSource(BindingSource order, BindingSource cancel,
+            BindingSource drugInOrder, BindingSource details)
         {
-            dataGridViewOrders.DataSource = dataSource;
+            dataGridViewOrders.DataSource = order;
+            dataGridViewCancelList.DataSource = cancel;
+            dataGridViewDrugInOrder.DataSource = drugInOrder;
+            dataGridViewOrderDetails.DataSource = details;
         }
 
         private void SetupViewEvents()
