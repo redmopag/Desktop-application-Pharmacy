@@ -54,7 +54,21 @@ namespace Pharmacy.Presenters
 
         private void PostCancel(object sender, EventArgs e)
         {
+            IList<DrugsInOrderModel> drugs = (IList<DrugsInOrderModel>)bsOrderCancel.List;
+            for(int i = 0; i < drugs.Count; ++i)
+            {
+                repository.DeleteDrug(drugs[i].DurgId);
+            }
             bsOrderCancel.Clear();
+
+            if(bsOrderDetail.Count == 0)
+            {
+                var orderModel = (OrderModel)bsOrderList.Current;
+                repository.DeleteOrder(orderModel.Id);
+
+                LoadAllOrderList();
+            }
+
             view.CancelText = "";
             view.Message = "Отказ отправлен";
         }
@@ -68,9 +82,19 @@ namespace Pharmacy.Presenters
 
         private void OrderAccept(object sender, EventArgs e)
         {
-            bsOrderList.Remove(bsOrderList.Current);
+            var orderModel = (OrderModel)bsOrderList.Current;
+            repository.DeleteOrder(orderModel.Id);
+
+            IList<DrugsInOrderModel> drugs = (IList<DrugsInOrderModel>)bsOrderDetail.List;
+            for(int i = 0; i < drugs.Count; ++i)
+            {
+                repository.DeleteDrug(drugs[i].DurgId);
+            }
             bsOrderDetail.Clear();
+
+
             view.Message = "Поставка принята";
+            LoadAllOrderList();
         }
 
         private void LookOrder(object sender, EventArgs e)

@@ -139,6 +139,7 @@ namespace Pharmacy.Views.OrderView
             {
                 tabControlOrders.TabPages.Remove(tabPageOrderAccept);
                 tabControlOrders.TabPages.Add(tabPageOrdersList);
+                dataGridViewOrderDetails.Rows.Clear();
             };
 
             buttonExit.Click += delegate { Close(); };
