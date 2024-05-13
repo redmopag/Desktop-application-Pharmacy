@@ -118,8 +118,8 @@
             // buttonDelete
             // 
             this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelete.BackColor = System.Drawing.Color.OrangeRed;
-            this.buttonDelete.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.buttonDelete.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonDelete.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Location = new System.Drawing.Point(697, 124);
             this.buttonDelete.Name = "buttonDelete";
@@ -131,8 +131,8 @@
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.BackColor = System.Drawing.Color.Orange;
-            this.buttonEdit.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
+            this.buttonEdit.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonEdit.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Location = new System.Drawing.Point(697, 94);
             this.buttonEdit.Name = "buttonEdit";
@@ -144,8 +144,8 @@
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.BackColor = System.Drawing.Color.YellowGreen;
-            this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.buttonAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Location = new System.Drawing.Point(697, 64);
             this.buttonAdd.Name = "buttonAdd";
@@ -207,8 +207,8 @@
             // 
             this.buttonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSearch.AutoSize = true;
-            this.buttonSearch.BackColor = System.Drawing.Color.PapayaWhip;
-            this.buttonSearch.FlatAppearance.BorderColor = System.Drawing.Color.PapayaWhip;
+            this.buttonSearch.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonSearch.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Location = new System.Drawing.Point(615, 32);
             this.buttonSearch.Name = "buttonSearch";
@@ -240,9 +240,10 @@
             // 
             // buttonCancel
             // 
+            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoSize = true;
-            this.buttonCancel.BackColor = System.Drawing.Color.Teal;
-            this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.buttonCancel.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCancel.Location = new System.Drawing.Point(434, 266);
@@ -254,9 +255,10 @@
             // 
             // buttonSave
             // 
+            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.AutoSize = true;
-            this.buttonSave.BackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSave.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.buttonSave.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonSave.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSave.Location = new System.Drawing.Point(225, 266);
@@ -304,9 +306,11 @@
             // 
             // tabControlSupplierLists
             // 
+            this.tabControlSupplierLists.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlSupplierLists.Controls.Add(this.tabPageList);
             this.tabControlSupplierLists.Controls.Add(this.tabPageDetail);
-            this.tabControlSupplierLists.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlSupplierLists.Location = new System.Drawing.Point(0, 56);
             this.tabControlSupplierLists.Name = "tabControlSupplierLists";
             this.tabControlSupplierLists.SelectedIndex = 0;
@@ -353,7 +357,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControlSupplierLists);
             this.Controls.Add(this.panelTitle);

@@ -63,6 +63,12 @@ namespace Pharmacy.Views.OrderView
                 AddAnotherDrugEvent?.Invoke(this, EventArgs.Empty);
                 if (!isSuccessful)
                     MessageBox.Show(message);
+                else
+                {
+                    textBoxDrugName.Text = "";
+                    textBoxDrugCount.Text = "";
+                    comboBoxSupplierForOrder.SelectedIndex = -1;
+                }
             };
 
             buttonDeleteDrug.Click += delegate
