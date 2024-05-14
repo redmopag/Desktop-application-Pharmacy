@@ -45,6 +45,7 @@ namespace Pharmacy.Presenters
             this.view.OrderAcceptEvent += OrderAccept;
             this.view.RemoveFromCancelEvent += RemoveFromCancel;
             this.view.PostCancelEvent += PostCancel;
+            this.view.ToCancelListEvent += ToCancelList;
             
 
             this.view.SetBindingSource(bsOrderList, bsOrderCancel, bsNewOrder, bsOrderDetail);
@@ -52,25 +53,45 @@ namespace Pharmacy.Presenters
             this.view.Show();
         }
 
+        private void ToCancelList(object sender, EventArgs e)
+        {
+            if(bsOrderCancel.Count == 0)
+            {
+                view.IsSuccessful = false;
+                view.Message = "Лекарства для отказа не выбраны";
+            }
+            else
+            {
+                view.IsSuccessful = true;
+            }
+        }
+
         private void PostCancel(object sender, EventArgs e)
         {
-            IList<DrugsInOrderModel> drugs = (IList<DrugsInOrderModel>)bsOrderCancel.List;
-            for(int i = 0; i < drugs.Count; ++i)
+            if (bsOrderCancel.Count == 0)
             {
-                repository.DeleteDrug(drugs[i].DurgId);
+                view.Message = "Лекарства для отказа не выбраны";
             }
-            bsOrderCancel.Clear();
-
-            if(bsOrderDetail.Count == 0)
+            else
             {
-                var orderModel = (OrderModel)bsOrderList.Current;
-                repository.DeleteOrder(orderModel.Id);
+                IList<DrugsInOrderModel> drugs = (IList<DrugsInOrderModel>)bsOrderCancel.List;
+                for (int i = 0; i < drugs.Count; ++i)
+                {
+                    repository.DeleteDrug(drugs[i].DurgId);
+                }
+                bsOrderCancel.Clear();
 
-                LoadAllOrderList();
+                if (bsOrderDetail.Count == 0)
+                {
+                    var orderModel = (OrderModel)bsOrderList.Current;
+                    repository.DeleteOrder(orderModel.Id);
+
+                    LoadAllOrderList();
+                }
+
+                view.CancelText = "";
+                view.Message = "Отказ отправлен";
             }
-
-            view.CancelText = "";
-            view.Message = "Отказ отправлен";
         }
 
         private void RemoveFromCancel(object sender, EventArgs e)
@@ -118,12 +139,15 @@ namespace Pharmacy.Presenters
             {
                 // Получение рандомного времени и даты доставки заказа
                 Random gen = new Random();
-                DateTime start = new DateTime(2023, 11, 12);
-                int range = (DateTime.Today - start).Days;
-                DateTime dateTime = start.AddDays(gen.Next(range));
+                DateTime startDate = new DateTime(2023, 11, 12);
+                DateTime endDate = DateTime.Today;
+                TimeSpan range = endDate - startDate;
+                TimeSpan newSpan = new TimeSpan(0, gen.Next(0, (int)range.TotalMinutes), 0);
 
-                string date = dateTime.Date.ToString();
-                string time = dateTime.TimeOfDay.ToString();
+                DateTime dateTime = startDate + newSpan;
+
+                string date = dateTime.ToShortDateString();
+                string time = dateTime.ToShortTimeString();
 
                 // Создаём модель заказа
                 var model = new OrderModel();
@@ -156,7 +180,7 @@ namespace Pharmacy.Presenters
             else
             {
                 view.IsSuccessful = false;
-                view.Message = "Ошибка";
+                view.Message = "Не выбраны лекарства для заказа";
             }
         }
 
@@ -167,9 +191,11 @@ namespace Pharmacy.Presenters
 
         private void AddDrug(object sender, EventArgs e)
         {
-            if(!string.IsNullOrWhiteSpace(view.DrugCount) && !string.IsNullOrWhiteSpace(view.DrugName))
+            try
             {
-                string supplierName = view.SelectedText;
+                new Common.DrugInOrderDataValidator().Validate(view);
+
+                string supplierName = (string)view.SelectedSupplier;
                 IEnumerable<SupplierModel> suppliers = supplierRepository.GetByValue(supplierName);
 
                 DrugsInOrderModel model = new DrugsInOrderModel();
@@ -177,13 +203,14 @@ namespace Pharmacy.Presenters
                 model.Amount = int.Parse(view.DrugCount);
                 model.SupplierId = suppliers.First().Id;
 
+                new Common.ModelDataValidator().Validate(model);
+
                 bsNewOrder.Add(model);
                 view.IsSuccessful = true;
-            }
-            else
+            } catch(Exception ex)
             {
                 view.IsSuccessful = false;
-                view.Message = "Поля должны быть заполнены";
+                view.Message = ex.Message;
             }
         }
 

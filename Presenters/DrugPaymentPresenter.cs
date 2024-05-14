@@ -76,14 +76,19 @@ namespace Pharmacy.Presenters
             {
                 if (this.view.MethodIndex == 0)
                 {
-                    if (double.Parse(this.view.Provided) < double.Parse(this.view.SumPrice))
-                    {
-                        this.view.Message = "Недостаточная сумма";
-                        this.view.IsSuccessful = false;
-                    }
-                    else if (string.IsNullOrEmpty(this.view.Provided))
+                    if (string.IsNullOrEmpty(this.view.Provided))
                     {
                         this.view.Message = "Не указана сумма";
+                        this.view.IsSuccessful = false;
+                    }
+                    else if (!double.TryParse(this.view.Provided, out _))
+                    {
+                        this.view.Message = "Число должно быть вещественным, либо целочисленным";
+                        this.view.IsSuccessful = false;
+                    }
+                    else if (double.Parse(this.view.Provided) < double.Parse(this.view.SumPrice))
+                    {
+                        this.view.Message = "Недостаточная сумма";
                         this.view.IsSuccessful = false;
                     }
                     else

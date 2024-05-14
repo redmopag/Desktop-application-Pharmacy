@@ -62,6 +62,7 @@
             // 
             // labelSupplierEmail
             // 
+            this.labelSupplierEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSupplierEmail.AutoSize = true;
             this.labelSupplierEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSupplierEmail.Location = new System.Drawing.Point(222, 206);
@@ -72,6 +73,7 @@
             // 
             // textBoxSupplier
             // 
+            this.textBoxSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSupplier.Location = new System.Drawing.Point(383, 139);
             this.textBoxSupplier.Name = "textBoxSupplier";
@@ -80,6 +82,7 @@
             // 
             // labelSupplier
             // 
+            this.labelSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSupplier.AutoSize = true;
             this.labelSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSupplier.Location = new System.Drawing.Point(222, 139);
@@ -90,6 +93,7 @@
             // 
             // labelId
             // 
+            this.labelId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelId.AutoSize = true;
             this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelId.Location = new System.Drawing.Point(222, 71);
@@ -183,7 +187,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewSuppliers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewSuppliers.EnableHeadersVisualStyles = false;
-            this.dataGridViewSuppliers.Location = new System.Drawing.Point(27, 64);
+            this.dataGridViewSuppliers.Location = new System.Drawing.Point(0, 64);
             this.dataGridViewSuppliers.Name = "dataGridViewSuppliers";
             this.dataGridViewSuppliers.ReadOnly = true;
             this.dataGridViewSuppliers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -200,7 +204,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridViewSuppliers.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewSuppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSuppliers.Size = new System.Drawing.Size(663, 282);
+            this.dataGridViewSuppliers.Size = new System.Drawing.Size(690, 304);
             this.dataGridViewSuppliers.TabIndex = 3;
             // 
             // buttonSearch
@@ -223,16 +227,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSearch.Location = new System.Drawing.Point(27, 32);
+            this.textBoxSearch.Location = new System.Drawing.Point(3, 32);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(581, 24);
+            this.textBoxSearch.Size = new System.Drawing.Size(605, 24);
             this.textBoxSearch.TabIndex = 1;
             // 
             // labelSearch
             // 
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSearch.Location = new System.Drawing.Point(23, 9);
+            this.labelSearch.Location = new System.Drawing.Point(3, 9);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(55, 20);
             this.labelSearch.TabIndex = 0;
@@ -270,6 +274,7 @@
             // 
             // textBoxProduct
             // 
+            this.textBoxProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxProduct.Location = new System.Drawing.Point(383, 206);
             this.textBoxProduct.Name = "textBoxProduct";
@@ -296,6 +301,7 @@
             // 
             // textBoxSupplierId
             // 
+            this.textBoxSupplierId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSupplierId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSupplierId.Location = new System.Drawing.Point(383, 68);
             this.textBoxSupplierId.Name = "textBoxSupplierId";
@@ -334,9 +340,10 @@
             // 
             // panelTitle
             // 
+            this.panelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTitle.Controls.Add(this.buttonExit);
             this.panelTitle.Controls.Add(this.labelSuppliers);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(800, 56);

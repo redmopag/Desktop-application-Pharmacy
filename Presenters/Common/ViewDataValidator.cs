@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pharmacy.Presenters.Common
 {
-    public class ViewDataValidator
+    public class DrugViewDataValidator
     {
         public void Validate(IDrugView view)
         {

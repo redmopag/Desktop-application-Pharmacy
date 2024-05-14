@@ -60,7 +60,7 @@ namespace Pharmacy.Presenters
             try
             {
                 view.DrugCost = view.DrugCost.Replace('.', ',');
-                new Common.ViewDataValidator().Validate(view);
+                new Common.DrugViewDataValidator().Validate(view);
 
                 var model = new DrugModel();
                 model.Id = int.TryParse(view.DrugId, out _) ? int.Parse(view.DrugId) : 0;

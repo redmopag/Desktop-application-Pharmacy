@@ -36,14 +36,14 @@
             this.panelViews.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelViews.Location = new System.Drawing.Point(0, 0);
             this.panelViews.Name = "panelViews";
-            this.panelViews.Size = new System.Drawing.Size(800, 450);
+            this.panelViews.Size = new System.Drawing.Size(1087, 531);
             this.panelViews.TabIndex = 1;
             // 
             // PharmacyView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1087, 531);
             this.Controls.Add(this.panelViews);
             this.Name = "PharmacyView";
             this.Text = "Pharmacy";

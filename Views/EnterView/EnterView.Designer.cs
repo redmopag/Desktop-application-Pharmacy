@@ -31,18 +31,17 @@
             this.textBoxEnterName = new System.Windows.Forms.TextBox();
             this.textBoxEnterPassword = new System.Windows.Forms.TextBox();
             this.buttonEnter = new System.Windows.Forms.Button();
-            this.pictureBoxLogin = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
+            this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxEnterName
             // 
-            this.textBoxEnterName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxEnterName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxEnterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEnterName.Location = new System.Drawing.Point(267, 189);
             this.textBoxEnterName.Name = "textBoxEnterName";
@@ -51,8 +50,7 @@
             // 
             // textBoxEnterPassword
             // 
-            this.textBoxEnterPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxEnterPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxEnterPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEnterPassword.Location = new System.Drawing.Point(267, 233);
             this.textBoxEnterPassword.Name = "textBoxEnterPassword";
@@ -62,8 +60,7 @@
             // 
             // buttonEnter
             // 
-            this.buttonEnter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEnter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonEnter.AutoSize = true;
             this.buttonEnter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -74,22 +71,20 @@
             this.buttonEnter.Text = "Войти";
             this.buttonEnter.UseVisualStyleBackColor = true;
             // 
-            // pictureBoxLogin
+            // pictureBoxLogo
             // 
-            this.pictureBoxLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxLogin.Image = global::Pharmacy.Properties.Resources.Human;
-            this.pictureBoxLogin.Location = new System.Drawing.Point(229, 189);
-            this.pictureBoxLogin.Name = "pictureBoxLogin";
-            this.pictureBoxLogin.Size = new System.Drawing.Size(32, 26);
-            this.pictureBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogin.TabIndex = 5;
-            this.pictureBoxLogin.TabStop = false;
+            this.pictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxLogo.Image = global::Pharmacy.Properties.Resources.Capsule;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(311, 56);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(151, 127);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 3;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // pictureBoxPassword
             // 
-            this.pictureBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBoxPassword.Image = global::Pharmacy.Properties.Resources.Zamok;
             this.pictureBoxPassword.Location = new System.Drawing.Point(229, 233);
             this.pictureBoxPassword.Name = "pictureBoxPassword";
@@ -98,17 +93,16 @@
             this.pictureBoxPassword.TabIndex = 4;
             this.pictureBoxPassword.TabStop = false;
             // 
-            // pictureBoxLogo
+            // pictureBoxLogin
             // 
-            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxLogo.Image = global::Pharmacy.Properties.Resources.Capsule;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(311, 56);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(151, 127);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 3;
-            this.pictureBoxLogo.TabStop = false;
+            this.pictureBoxLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBoxLogin.Image = global::Pharmacy.Properties.Resources.Human;
+            this.pictureBoxLogin.Location = new System.Drawing.Point(229, 189);
+            this.pictureBoxLogin.Name = "pictureBoxLogin";
+            this.pictureBoxLogin.Size = new System.Drawing.Size(32, 26);
+            this.pictureBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogin.TabIndex = 5;
+            this.pictureBoxLogin.TabStop = false;
             // 
             // EnterView
             // 
@@ -124,9 +118,9 @@
             this.Controls.Add(this.textBoxEnterName);
             this.Name = "EnterView";
             this.Text = "EnterView";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -57,6 +57,8 @@ namespace Pharmacy.Presenters
         {
             try
             {
+                new Common.SupplierViewDataValidator().Validate(this.view);
+
                 var model = new SupplierModel();
                 model.Id = int.TryParse(view.SupplierId, out _) ? int.Parse(view.SupplierId) : 0;
                 model.Name = view.SupplierName;

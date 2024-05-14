@@ -80,7 +80,9 @@
     <Compile Include="Models\EnterModel.cs" />
     <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Models\SupplierModel.cs" />
+    <Compile Include="Presenters\Common\DrugInOrderDataValidator.cs" />
     <Compile Include="Presenters\Common\ModelDataValidator.cs" />
+    <Compile Include="Presenters\Common\SupplierViewDataValidator.cs" />
     <Compile Include="Presenters\Common\ViewDataValidator.cs" />
     <Compile Include="Presenters\DrugPaymentPresenter.cs" />
     <Compile Include="Presenters\EnterPresenter.cs" />

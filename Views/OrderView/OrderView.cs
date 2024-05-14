@@ -24,6 +24,7 @@ namespace Pharmacy.Views.OrderView
         public event EventHandler OrderAcceptEvent;
         public event EventHandler RemoveFromCancelEvent;
         public event EventHandler PostCancelEvent;
+        public event EventHandler ToCancelListEvent;
 
         public OrderView()
         {
@@ -111,8 +112,17 @@ namespace Pharmacy.Views.OrderView
 
             buttonOrderCancel.Click += delegate
             {
-                tabControlOrders.TabPages.Remove(tabPageOrderAccept);
-                tabControlOrders.TabPages.Add(tabPageOrderCancel);
+                ToCancelListEvent?.Invoke(this, EventArgs.Empty);
+
+                if (isSuccessful)
+                {
+                    tabControlOrders.TabPages.Remove(tabPageOrderAccept);
+                    tabControlOrders.TabPages.Add(tabPageOrderCancel);
+                }
+                else
+                {
+                    MessageBox.Show(message);
+                }
             };
 
             dataGridViewCancelList.DoubleClick += delegate
@@ -183,9 +193,9 @@ namespace Pharmacy.Views.OrderView
         {
             get => comboBoxSupplierForOrder.Items;
         }
-        public string SelectedText
+        public object SelectedSupplier
         {
-            get => comboBoxSupplierForOrder.SelectedText;
+            get => comboBoxSupplierForOrder.SelectedItem;
         }
         public string CancelText
         {

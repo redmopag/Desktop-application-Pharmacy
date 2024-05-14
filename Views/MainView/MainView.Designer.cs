@@ -42,6 +42,8 @@
             // 
             // panelControl
             // 
+            this.panelControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelControl.BackColor = System.Drawing.Color.Transparent;
             this.panelControl.Controls.Add(this.buttonOrder);
             this.panelControl.Controls.Add(this.buttonPayment);
@@ -49,7 +51,6 @@
             this.panelControl.Controls.Add(this.pictureBoxLogo);
             this.panelControl.Controls.Add(this.buttonSuppliers);
             this.panelControl.Controls.Add(this.buttonDrugs);
-            this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl.Location = new System.Drawing.Point(0, 0);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(200, 450);
@@ -137,8 +138,10 @@
             // 
             // panelViews
             // 
+            this.panelViews.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelViews.BackColor = System.Drawing.Color.Transparent;
-            this.panelViews.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelViews.Location = new System.Drawing.Point(200, 0);
             this.panelViews.Name = "panelViews";
             this.panelViews.Size = new System.Drawing.Size(600, 450);
