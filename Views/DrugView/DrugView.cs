@@ -43,7 +43,6 @@ namespace Pharmacy.Views
                 AddEvent?.Invoke(this, EventArgs.Empty);
                 tabControlDrugLists.TabPages.Remove(tabPageList);
                 tabControlDrugLists.TabPages.Add(tabPageDetail);
-                tabPageDetail.Text = "Add drug";
             };
             // Edit
             buttonEdit.Click += delegate 
@@ -51,7 +50,6 @@ namespace Pharmacy.Views
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 tabControlDrugLists.TabPages.Remove(tabPageList);
                 tabControlDrugLists.TabPages.Add(tabPageDetail);
-                tabPageDetail.Text = "Edit drug";
             };
             // Delete
             buttonDelete.Click += delegate 

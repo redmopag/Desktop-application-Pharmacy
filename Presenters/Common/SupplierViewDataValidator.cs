@@ -18,7 +18,7 @@ namespace Pharmacy.Presenters.Common
             }
             else
             {
-                errorMessage += "Supplier email must contains @";
+                errorMessage += "Email поставщика должен содержать @";
             }
 
             throw new Exception(errorMessage);

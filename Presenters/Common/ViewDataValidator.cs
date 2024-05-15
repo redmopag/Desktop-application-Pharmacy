@@ -15,15 +15,15 @@ namespace Pharmacy.Presenters.Common
             string errorMessage = "";
             if (!int.TryParse(view.DrugAmount, out _))
             {
-                errorMessage += " -Drug amount must be integer value\n";
+                errorMessage += " -Кол-во лекарства должно быть целым числом\n";
             }
             else if (!int.TryParse(view.DrugPlace, out _))
             {
-                errorMessage += " -Drug place must be integer value\n";
+                errorMessage += " -Расположение лекарства должно быть целым число\n";
             }
             else if (!double.TryParse(view.DrugCost, out _) && !int.TryParse(view.DrugCost, out _))
             {
-                errorMessage += " -Drug cost must be fractional or integer number\n";
+                errorMessage += " -Цена за лекарство должна быть вещественным или целым числом\n";
             }
             else
             {

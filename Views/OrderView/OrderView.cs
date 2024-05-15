@@ -93,12 +93,12 @@ namespace Pharmacy.Views.OrderView
                 ChooseEvent?.Invoke(this, EventArgs.Empty);
             };
 
-            buttonDetail.Click += delegate
+            dataGridViewOrders.DoubleClick += delegate
             {
+                LookOrderEvent?.Invoke(this, EventArgs.Empty);
+
                 tabControlOrders.TabPages.Remove(tabPageOrdersList);
                 tabControlOrders.TabPages.Add(tabPageOrderAccept);
-
-                LookOrderEvent?.Invoke(this, EventArgs.Empty);
             };
 
             buttonOrderAccept.Click += delegate

@@ -46,7 +46,6 @@ namespace Pharmacy.Views.SuppliersView
                 AddEvent?.Invoke(this, EventArgs.Empty);
                 tabControlSupplierLists.TabPages.Remove(tabPageList);
                 tabControlSupplierLists.TabPages.Add(tabPageDetail);
-                tabPageDetail.Text = "Add drug";
             };
             // Edit
             buttonEdit.Click += delegate
@@ -54,7 +53,6 @@ namespace Pharmacy.Views.SuppliersView
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 tabControlSupplierLists.TabPages.Remove(tabPageList);
                 tabControlSupplierLists.TabPages.Add(tabPageDetail);
-                tabPageDetail.Text = "Edit drug";
             };
             // Delete
             buttonDelete.Click += delegate
