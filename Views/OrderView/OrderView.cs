@@ -89,6 +89,7 @@ namespace Pharmacy.Views.OrderView
                     tabControlOrders.TabPages.Remove(tabPageOrderAdd);
                     tabControlOrders.TabPages.Add(tabPageOrdersList);
                 }
+                dataGridViewDrugInOrder.Rows.Clear();
                 MessageBox.Show(message);
             };
 

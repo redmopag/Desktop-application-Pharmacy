@@ -78,7 +78,7 @@ namespace Pharmacy.Presenters
             }
             else
             {
-                List<DrugsInOrderModel> drugs = (List<DrugsInOrderModel>)bsOrderCancel.List;
+                IList<DrugsInOrderModel> drugs = (IList<DrugsInOrderModel>)bsOrderCancel.List;
                 for (int i = 0; i < drugs.Count; ++i)
                 {
                     repository.DeleteDrug(drugs[i].DurgId);
@@ -110,7 +110,7 @@ namespace Pharmacy.Presenters
             var orderModel = (OrderModel)bsOrderList.Current;
             repository.DeleteOrder(orderModel.Id);
 
-            List<DrugsInOrderModel> drugs = (List<DrugsInOrderModel>)bsOrderDetail.List;
+            IList<DrugsInOrderModel> drugs = (IList<DrugsInOrderModel>)bsOrderDetail.List;
             for(int i = 0; i < drugs.Count; ++i)
             {
                 Random random = new Random();
