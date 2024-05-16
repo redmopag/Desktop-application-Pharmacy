@@ -57,7 +57,11 @@ namespace Pharmacy.Views.OrderView
 
             buttonOrderSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
 
-            textBoxOrdersSearch.KeyDown += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            textBoxOrdersSearch.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                    SearchEvent?.Invoke(this, EventArgs.Empty);
+            };
 
             buttonAddDrug.Click += delegate 
             { 
@@ -77,7 +81,7 @@ namespace Pharmacy.Views.OrderView
                 DeleteDrugEvent?.Invoke(this, EventArgs.Empty);
             };
 
-            buttonMakeOrder.Click += delegate
+            buttonMakeOrder.MouseClick += delegate
             {
                 PostOrderEvent?.Invoke(this, EventArgs.Empty);
                 if(isSuccessful)
@@ -101,7 +105,7 @@ namespace Pharmacy.Views.OrderView
                 tabControlOrders.TabPages.Add(tabPageOrderAccept);
             };
 
-            buttonOrderAccept.Click += delegate
+            buttonOrderAccept.MouseDown += delegate
             {
                 tabControlOrders.TabPages.Remove(tabPageOrderAccept);
                 tabControlOrders.TabPages.Add(tabPageOrdersList);

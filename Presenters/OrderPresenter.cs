@@ -1,4 +1,5 @@
 ﻿using Pharmacy.Models;
+using Pharmacy.Repositories;
 using Pharmacy.Repositories.OrderRepository;
 using Pharmacy.Repositories.SupplierRepository;
 using Pharmacy.Views.OrderView;
@@ -15,6 +16,8 @@ namespace Pharmacy.Presenters
     {
         private OrderRepository repository;
         private SupplierRepository supplierRepository;
+        private DrugRepository drugRepository;
+
         private OrderView view;
         private BindingSource bsOrderList;
         private BindingSource bsOrderDetail;
@@ -24,7 +27,7 @@ namespace Pharmacy.Presenters
         private IEnumerable<OrderModel> orderList;
         private IEnumerable<DrugsInOrderModel> drugList;
 
-        public OrderPresenter(OrderRepository repository, OrderView view, SupplierRepository supplierRepository)
+        public OrderPresenter(OrderRepository repository, OrderView view, SupplierRepository supplierRepository, DrugRepository drugRepository)
         {
             bsOrderList = new BindingSource();
             bsOrderDetail = new BindingSource();
@@ -34,6 +37,7 @@ namespace Pharmacy.Presenters
             this.repository = repository;
             this.view = view;
             this.supplierRepository = supplierRepository;
+            this.drugRepository = drugRepository;
 
             this.view.SearchEvent += SearchOrder;
             this.view.AddOrderEvent += AddOrder;
@@ -74,7 +78,7 @@ namespace Pharmacy.Presenters
             }
             else
             {
-                IList<DrugsInOrderModel> drugs = (IList<DrugsInOrderModel>)bsOrderCancel.List;
+                List<DrugsInOrderModel> drugs = (List<DrugsInOrderModel>)bsOrderCancel.List;
                 for (int i = 0; i < drugs.Count; ++i)
                 {
                     repository.DeleteDrug(drugs[i].DurgId);
@@ -106,9 +110,16 @@ namespace Pharmacy.Presenters
             var orderModel = (OrderModel)bsOrderList.Current;
             repository.DeleteOrder(orderModel.Id);
 
-            IList<DrugsInOrderModel> drugs = (IList<DrugsInOrderModel>)bsOrderDetail.List;
+            List<DrugsInOrderModel> drugs = (List<DrugsInOrderModel>)bsOrderDetail.List;
             for(int i = 0; i < drugs.Count; ++i)
             {
+                Random random = new Random();
+                DrugModel model = new DrugModel();
+                model.Name = drugs[i].Name;
+                model.Amount = drugs[i].Amount;
+                model.Cost = random.Next() % 10000;
+                drugRepository.Add(model);
+
                 repository.DeleteDrug(drugs[i].DurgId);
             }
             bsOrderDetail.Clear();
@@ -116,6 +127,8 @@ namespace Pharmacy.Presenters
 
             view.Message = "Поставка принята";
             LoadAllOrderList();
+
+
         }
 
         private void LookOrder(object sender, EventArgs e)

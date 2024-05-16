@@ -127,7 +127,7 @@ namespace Pharmacy.Repositories.OrderRepository
                     cmd.Connection = connect;
                     // Вводим команду
                     cmd.CommandText = @"Select * from Orders
-                                    where (Order_id=@id or Order_data like @data)
+                                    where (Order_id=@id or Order_data=@data)
                                     order by Order_id desc";
                     cmd.Parameters.Add("@id", DbType.Int32).Value = id;
                     cmd.Parameters.AddWithValue("@data", "%" + data + "%");

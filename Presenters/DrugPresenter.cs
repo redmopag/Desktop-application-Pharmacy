@@ -35,7 +35,6 @@ namespace Pharmacy.Presenters
             // Если было вызвано событие, то то, как оно будет обрабатываться, опредеяется в SearchDrug
             // С остальными событиями аналогичная ситуация
             this.view.SearchEvent += SearchDrug;
-            this.view.AddEvent += AddDrug;
             this.view.EditEvent += EditDrug;
             this.view.DeleteEvent += DeleteDrug;
             this.view.SaveEvent += SaveDrug;

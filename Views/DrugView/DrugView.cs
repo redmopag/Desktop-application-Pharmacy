@@ -37,13 +37,6 @@ namespace Pharmacy.Views
                 if (e.KeyCode == Keys.Enter)
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
-            // Add
-            buttonAdd.Click += delegate 
-            {
-                AddEvent?.Invoke(this, EventArgs.Empty);
-                tabControlDrugLists.TabPages.Remove(tabPageList);
-                tabControlDrugLists.TabPages.Add(tabPageDetail);
-            };
             // Edit
             buttonEdit.Click += delegate 
             { 
@@ -62,7 +55,7 @@ namespace Pharmacy.Views
                 }
             };
             // Save
-            buttonSave.Click += delegate 
+            buttonSave.MouseDown += delegate 
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 if(IsSuccessful)
@@ -112,7 +105,6 @@ namespace Pharmacy.Views
         public event EventHandler SearchEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
-        public event EventHandler AddEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 

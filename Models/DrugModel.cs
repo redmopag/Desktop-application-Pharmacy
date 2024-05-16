@@ -23,7 +23,6 @@ namespace Pharmacy.Models
 
         [DisplayName("Название")]
         [Required(ErrorMessage = "Drug name is required")]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "Drug name must be between 3 and 50 characters")]
         public string Name { get => name; set => name = value; }
 
         [DisplayName("Количество")]
@@ -31,7 +30,6 @@ namespace Pharmacy.Models
         public int Amount { get => amount; set => amount = value; }
 
         [DisplayName("Ящик")]
-        [Required(ErrorMessage = "Drug case is required")]
         public int Place { get => place; set => place = value; }
 
         [DisplayName("Цена")]

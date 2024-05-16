@@ -26,7 +26,6 @@ namespace Pharmacy.Views
         event EventHandler SearchEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
-        event EventHandler AddEvent;
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 

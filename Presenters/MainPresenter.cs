@@ -43,7 +43,8 @@ namespace Pharmacy.Presenters
             mainView.SetForm((Form)view);
             OrderRepository repository = new OrderRepository(sqlConnection);
             SupplierRepository supplierRepository = new SupplierRepository(sqlConnection);
-            new OrderPresenter(repository, view, supplierRepository);
+            DrugRepository drugRepository = new DrugRepository(sqlConnection);
+            new OrderPresenter(repository, view, supplierRepository, drugRepository);
         }
 
         private void ShowPayment(object sender, EventArgs e)

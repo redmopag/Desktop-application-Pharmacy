@@ -11,6 +11,7 @@ using System.Configuration;
 using Pharmacy.Views.EnterView;
 using Pharmacy.Views.MainView;
 using Pharmacy.Repositories.EnterRepository;
+using System.IO;
 
 namespace Pharmacy
 {
@@ -24,13 +25,13 @@ namespace Pharmacy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            string sqlConnection = ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString;
+            //string sqlConnection = ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString;
 
-            /*var root = Directory.GetCurrentDirectory();
+            var root = Directory.GetCurrentDirectory();
             var temp = Directory.GetParent(root);
             var db = Directory.GetParent(temp.FullName);
-            string sqlConnection = @"Data Source=" + db + @"\Pharmacy.db;Version=3;";*/
-            
+            string sqlConnection = @"Data Source=" + db + @"\Pharmacy.db;Version=3;";
+
             IPharmacyView pharmacyView = new PharmacyView();
             new PharmacyPresenter(pharmacyView, sqlConnection);
             Application.Run((Form)pharmacyView);
